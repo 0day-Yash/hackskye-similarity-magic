@@ -95,35 +95,35 @@ const Workshops = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-hackskye-light-gray">
+    <div className="min-h-screen bg-gradient-to-b from-black via-purple-900 to-blue-900">
       <Navbar />
       
       <section className="pt-32 pb-20 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-hackskye-blue/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-hackskye-blue/5 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
         </div>
         
         <div ref={containerRef} className="container px-4 mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div 
               data-animate
-              className="inline-block mb-3 py-1 px-3 bg-hackskye-blue/10 text-hackskye-blue rounded-full text-xs font-medium opacity-0"
+              className="inline-block mb-3 py-1 px-3 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium opacity-0"
             >
               Learn & Connect
             </div>
             
             <h2 
               data-animate
-              className="text-3xl md:text-4xl font-bold mb-6 opacity-0 animation-delay-200"
+              className="text-3xl md:text-4xl font-bold mb-6 text-white opacity-0 animation-delay-200"
             >
               Workshops & Sessions
             </h2>
             
             <p 
               data-animate
-              className="text-gray-600 opacity-0 animation-delay-400"
+              className="text-gray-300 opacity-0 animation-delay-400"
             >
               Enhance your skills with expert-led workshops before the main hackathon. 
               All workshops are free for registered hackathon participants.
@@ -135,39 +135,39 @@ const Workshops = () => {
             className="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-0 animation-delay-600"
           >
             {workshopsData.map((workshop) => (
-              <Card key={workshop.id} className="border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
+              <Card key={workshop.id} className="border border-purple-800 bg-black/40 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 shadow-purple-900/30 text-white">
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <CardTitle className="text-xl font-semibold">{workshop.title}</CardTitle>
-                    <Badge variant="outline" className="bg-hackskye-blue/10 text-hackskye-blue border-none">
+                    <Badge variant="outline" className="bg-purple-500/20 text-purple-300 border-purple-700">
                       {workshop.category}
                     </Badge>
                   </div>
-                  <CardDescription className="mt-2">{workshop.description}</CardDescription>
+                  <CardDescription className="mt-2 text-gray-300">{workshop.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    <div className="flex items-center text-sm">
-                      <CalendarIcon className="mr-2 h-4 w-4 text-gray-500" />
+                    <div className="flex items-center text-sm text-gray-300">
+                      <CalendarIcon className="mr-2 h-4 w-4 text-purple-400" />
                       <span>{workshop.date}</span>
                     </div>
-                    <div className="flex items-center text-sm">
-                      <Clock className="mr-2 h-4 w-4 text-gray-500" />
+                    <div className="flex items-center text-sm text-gray-300">
+                      <Clock className="mr-2 h-4 w-4 text-purple-400" />
                       <span>{workshop.time}</span>
                     </div>
-                    <div className="flex items-center text-sm">
-                      <MapPin className="mr-2 h-4 w-4 text-gray-500" />
+                    <div className="flex items-center text-sm text-gray-300">
+                      <MapPin className="mr-2 h-4 w-4 text-purple-400" />
                       <span>{workshop.venue}</span>
                     </div>
-                    <div className="flex items-center text-sm">
-                      <User className="mr-2 h-4 w-4 text-gray-500" />
+                    <div className="flex items-center text-sm text-gray-300">
+                      <User className="mr-2 h-4 w-4 text-purple-400" />
                       <span>{workshop.instructor}</span>
                     </div>
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
-                  <span className="text-sm text-gray-500">Available seats: {workshop.seats}</span>
-                  <Button variant="outline" className="text-hackskye-blue hover:bg-hackskye-blue hover:text-white transition-colors">
+                  <span className="text-sm text-gray-400">Available seats: {workshop.seats}</span>
+                  <Button className="bg-purple-600 hover:bg-purple-700 text-white">
                     Register
                   </Button>
                 </CardFooter>
