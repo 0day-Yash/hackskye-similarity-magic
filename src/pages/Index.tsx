@@ -40,7 +40,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-white to-hackskye-light-gray">
       <Navbar />
       <Hero />
       <About />

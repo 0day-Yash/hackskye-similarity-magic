@@ -46,12 +46,14 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           <Link to="/" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Home</Link>
+          <Link to="/tracks" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Tracks</Link>
           <Link to="/schedule" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Schedule</Link>
+          <Link to="/workshops" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Workshops</Link>
+          <Link to="/speakers" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Speakers</Link>
           <Link to="/prizes" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Prizes</Link>
           <Link to="/gallery" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Gallery</Link>
           <Link to="/team" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Team</Link>
           <a href="#faq" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">FAQ</a>
-          <a href="#sponsors" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Sponsors</a>
           <Button className="bg-hackskye-blue hover:bg-hackskye-blue/90 transition-all duration-300 shadow-md hover:shadow-lg ml-2" size="sm">
             Register Now
           </Button>
@@ -86,11 +88,32 @@ const Navbar = () => {
             Home
           </Link>
           <Link 
+            to="/tracks"
+            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Tracks
+          </Link>
+          <Link 
             to="/schedule"
             className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
             Schedule
+          </Link>
+          <Link 
+            to="/workshops"
+            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Workshops
+          </Link>
+          <Link 
+            to="/speakers"
+            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Speakers
           </Link>
           <Link 
             to="/prizes"
@@ -119,13 +142,6 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             FAQ
-          </a>
-          <a 
-            href="#sponsors" 
-            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Sponsors
           </a>
           <Button className="w-full bg-hackskye-blue hover:bg-hackskye-blue/90">
             Register Now
