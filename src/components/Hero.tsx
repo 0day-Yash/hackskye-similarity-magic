@@ -13,6 +13,7 @@ const Hero = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-fade-in");
+            entry.target.classList.remove("opacity-0");
           }
         });
       },
@@ -32,9 +33,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+    <section className="relative min-h-screen pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-white">
+      {/* Background Elements with fixed positioning and z-index */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-hackskye-blue/10 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-hackskye-blue/5 rounded-full blur-3xl"></div>
       </div>
@@ -55,7 +56,7 @@ const Hero = () => {
             className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight tracking-tighter opacity-0 animation-delay-200"
           >
             <span className="block">Welcome to </span>
-            <span className="text-gradient">Hackskye 2026</span>
+            <span className="text-hackskye-blue">Hackskye 2026</span>
           </h1>
           
           {/* Subtitle */}

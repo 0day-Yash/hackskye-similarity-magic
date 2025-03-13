@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -33,22 +34,25 @@ const Navbar = () => {
         : "py-5 bg-transparent"
     )}>
       <div className="container px-4 mx-auto flex items-center justify-between">
-        <a 
-          href="#" 
+        <Link 
+          to="/" 
           className="text-xl font-semibold tracking-tight flex items-center"
         >
           <span className="text-hackskye-blue font-bold">HACK</span>
           <span className="font-medium">SKYE</span>
           <span className="ml-2 bg-black text-white text-xs px-2 py-1 rounded-full">2026</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#about" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">About</a>
-          <a href="#timeline" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Timeline</a>
-          <a href="#sponsors" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Sponsors</a>
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link to="/" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Home</Link>
+          <Link to="/schedule" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Schedule</Link>
+          <Link to="/prizes" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Prizes</Link>
+          <Link to="/gallery" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Gallery</Link>
+          <Link to="/team" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Team</Link>
           <a href="#faq" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">FAQ</a>
-          <Button className="bg-hackskye-blue hover:bg-hackskye-blue/90 transition-all duration-300 shadow-md hover:shadow-lg" size="sm">
+          <a href="#sponsors" className="nav-link text-sm font-medium hover:text-hackskye-blue transition-colors">Sponsors</a>
+          <Button className="bg-hackskye-blue hover:bg-hackskye-blue/90 transition-all duration-300 shadow-md hover:shadow-lg ml-2" size="sm">
             Register Now
           </Button>
         </nav>
@@ -74,19 +78,47 @@ const Navbar = () => {
         )}
       >
         <nav className="container px-4 py-5 mx-auto flex flex-col space-y-4">
-          <a 
-            href="#about" 
+          <Link 
+            to="/"
             className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            About
-          </a>
-          <a 
-            href="#timeline" 
+            Home
+          </Link>
+          <Link 
+            to="/schedule"
             className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Timeline
+            Schedule
+          </Link>
+          <Link 
+            to="/prizes"
+            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Prizes
+          </Link>
+          <Link 
+            to="/gallery"
+            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Gallery
+          </Link>
+          <Link 
+            to="/team"
+            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Team
+          </Link>
+          <a 
+            href="#faq" 
+            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            FAQ
           </a>
           <a 
             href="#sponsors" 
@@ -94,13 +126,6 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             Sponsors
-          </a>
-          <a 
-            href="#faq" 
-            className="py-2 px-4 text-sm font-medium hover:bg-gray-50 rounded-md transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            FAQ
           </a>
           <Button className="w-full bg-hackskye-blue hover:bg-hackskye-blue/90">
             Register Now
