@@ -76,24 +76,24 @@ const FAQ = () => {
   }, []);
 
   return (
-    <section id="faq" className="py-20 bg-hackskye-light-gray relative overflow-hidden">
+    <section id="faq" className="py-20 bg-gray-100 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-hackskye-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gray-200/80 rounded-full blur-3xl"></div>
       </div>
       
       <div ref={containerRef} className="container px-4 mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div 
             data-animate
-            className="inline-block mb-3 py-1 px-3 bg-hackskye-blue/10 text-hackskye-blue rounded-full text-xs font-medium opacity-0"
+            className="inline-block mb-3 py-1 px-3 bg-gray-300/70 text-gray-700 rounded-full text-xs font-medium opacity-0"
           >
             Common Questions
           </div>
           
           <h2 
             data-animate
-            className="text-3xl md:text-4xl font-bold mb-6 opacity-0 animation-delay-200"
+            className="text-3xl md:text-4xl font-bold mb-6 opacity-0 animation-delay-200 text-gray-800"
           >
             Frequently Asked Questions
           </h2>
@@ -115,18 +115,18 @@ const FAQ = () => {
             <div 
               key={index}
               className={cn(
-                "border-b border-gray-100 last:border-0",
-                openIndexes.includes(index) ? "bg-hackskye-blue/5" : ""
+                "border-b border-gray-200 last:border-0",
+                openIndexes.includes(index) ? "bg-gray-200/50" : ""
               )}
             >
               <button
                 className="w-full px-6 py-4 flex items-center justify-between text-left"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="text-sm font-medium">{faq.question}</h3>
+                <h3 className="text-sm font-medium text-gray-800">{faq.question}</h3>
                 <ChevronDown 
                   className={cn(
-                    "w-5 h-5 text-gray-400 transition-transform duration-200",
+                    "w-5 h-5 text-gray-500 transition-transform duration-200",
                     openIndexes.includes(index) ? "transform rotate-180" : ""
                   )} 
                 />

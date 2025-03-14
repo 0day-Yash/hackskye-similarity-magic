@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-white border-t border-gray-100">
+    <footer className="bg-gray-100 border-t border-gray-200">
       <div className="container px-4 mx-auto py-12">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div className="mb-8 md:mb-0">
@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="font-medium">SKYE</span>
               <span className="ml-2 bg-black text-white text-xs px-2 py-1 rounded-full">2026</span>
             </a>
-            <p className="text-sm text-gray-500 mt-2 max-w-md">
+            <p className="text-sm text-gray-600 mt-2 max-w-md">
               The world's most innovative hackathon, bringing together the brightest minds 
               to create the future of technology.
             </p>
@@ -39,25 +39,25 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-100 pt-8">
+        <div className="border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 &copy; {currentYear} Hackskye. All rights reserved.
               </p>
             </div>
             
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-              <a href="#" className="text-sm text-gray-500 hover:text-hackskye-blue transition-colors">
+              <a href="#" className="text-sm text-gray-600 hover:text-hackskye-blue transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm text-gray-500 hover:text-hackskye-blue transition-colors">
+              <a href="#" className="text-sm text-gray-600 hover:text-hackskye-blue transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-sm text-gray-500 hover:text-hackskye-blue transition-colors">
+              <a href="#" className="text-sm text-gray-600 hover:text-hackskye-blue transition-colors">
                 Code of Conduct
               </a>
-              <a href="#" className="text-sm text-gray-500 hover:text-hackskye-blue transition-colors">
+              <a href="#" className="text-sm text-gray-600 hover:text-hackskye-blue transition-colors">
                 Contact Us
               </a>
             </div>
