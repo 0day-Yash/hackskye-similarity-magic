@@ -5,24 +5,24 @@ import { cn } from "@/lib/utils";
 
 const features = [
   {
-    icon: <Lightbulb className="w-6 h-6 text-hackskye-blue" />,
-    title: "Innovation",
-    description: "Explore cutting-edge technologies and push the boundaries of what's possible."
+    icon: <Lightbulb className="w-6 h-6 text-purple-400" />,
+    title: "Build Anything",
+    description: "Apps, games, hardware—go nuts. No rules, just results."
   },
   {
-    icon: <Users className="w-6 h-6 text-hackskye-blue" />,
-    title: "Collaboration",
-    description: "Connect with talented individuals and form teams to create something amazing."
+    icon: <Users className="w-6 h-6 text-purple-400" />,
+    title: "Network",
+    description: "Rub elbows with Bangalore's tech crew—mentors, judges, future bosses."
   },
   {
-    icon: <Code className="w-6 h-6 text-hackskye-blue" />,
-    title: "Learning",
-    description: "Expand your skillset through workshops, mentorship, and hands-on experience."
+    icon: <Code className="w-6 h-6 text-purple-400" />,
+    title: "Win Big",
+    description: "₹1,00,000 prize pool—hoodies, stickers, startup intros, certificates."
   },
   {
-    icon: <Award className="w-6 h-6 text-hackskye-blue" />,
-    title: "Recognition",
-    description: "Showcase your projects to industry leaders and win exciting prizes."
+    icon: <Award className="w-6 h-6 text-purple-400" />,
+    title: "Bragging Rights",
+    description: "Say you hacked at Hacksyke 2.0—India's youth will know the name."
   }
 ];
 
@@ -55,36 +55,35 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-20 bg-hackskye-light-gray relative overflow-hidden">
+    <section id="about" className="py-20 bg-gradient-to-b from-blue-900 via-purple-900 to-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-20 -left-20 w-80 h-80 bg-hackskye-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 -left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
       
       <div ref={containerRef} className="container px-4 mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div 
             data-animate
-            className="inline-block mb-3 py-1 px-3 bg-hackskye-blue/10 text-hackskye-blue rounded-full text-xs font-medium opacity-0"
+            className="inline-block mb-3 py-1 px-3 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium opacity-0"
           >
-            About Hackskye
+            What's Hacksyke?
           </div>
           
           <h2 
             data-animate
-            className="text-3xl md:text-4xl font-bold mb-6 opacity-0 animation-delay-200"
+            className="text-3xl md:text-4xl font-bold mb-6 opacity-0 animation-delay-200 text-white"
           >
-            The Ultimate Innovation Experience
+            India's Wildest Hackathon
           </h2>
           
           <p 
             data-animate
-            className="text-gray-600 opacity-0 animation-delay-400"
+            className="text-gray-300 opacity-0 animation-delay-400"
           >
-            Hackskye 2026 is a premier hackathon that brings together developers, 
-            designers, and innovators from around the world. Our mission is to 
-            inspire creativity, foster collaboration, and showcase the 
-            next generation of technology solutions.
+            Welcome to Hacksyke 2.0—the second edition of CodeQuestt, reborn as India's wildest hackathon 
+            franchise. We're kicking off in Bangalore with a 48-hour hybrid showdown where coders, creators, 
+            and dreamers build insane stuff for cheap.
           </p>
         </div>
         
@@ -94,15 +93,15 @@ const About = () => {
               key={index}
               data-animate
               className={cn(
-                "bg-white rounded-xl p-6 shadow-subtle hover:shadow-md transition-all duration-300 opacity-0",
+                "bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 shadow-xl hover:shadow-purple-500/5 transition-all duration-300 opacity-0",
                 `animation-delay-${(index + 1) * 200}`
               )}
             >
-              <div className="w-12 h-12 flex items-center justify-center bg-hackskye-blue/10 rounded-lg mb-4">
+              <div className="w-12 h-12 flex items-center justify-center bg-purple-900/50 rounded-lg mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-sm">{feature.description}</p>
+              <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
+              <p className="text-gray-400 text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -113,10 +112,13 @@ const About = () => {
             className="md:w-1/2 opacity-0"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-hackskye-blue rounded-xl opacity-10 blur-xl transform -rotate-3"></div>
-              <div className="relative bg-white rounded-xl overflow-hidden shadow-subtle">
-                <div className="aspect-video bg-hackskye-dark-blue/5 flex items-center justify-center">
-                  <span className="text-hackskye-blue font-medium">Event Photo</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl opacity-10 blur-xl transform -rotate-3"></div>
+              <div className="relative bg-black/40 rounded-xl overflow-hidden shadow-xl border border-purple-500/20">
+                <div className="aspect-video flex items-center justify-center p-8">
+                  <p className="text-gray-300 text-lg">
+                    Think epic ideas, sleepless nights, and a shot at greatness—all for ₹900 or less. 
+                    This isn't just an event; it's the start of a movement.
+                  </p>
                 </div>
               </div>
             </div>
@@ -126,18 +128,38 @@ const About = () => {
             data-animate
             className="md:w-1/2 opacity-0 animation-delay-200"
           >
-            <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-            <p className="text-gray-600 mb-5">
-              At Hackskye, we believe in the power of technology to transform lives and 
-              create a better future. Our hackathon is designed to be a catalyst for 
-              innovation, providing a platform for talented individuals to develop solutions 
-              to real-world problems.
-            </p>
-            <p className="text-gray-600">
-              Whether you're a seasoned developer or just starting your journey in tech, 
-              Hackskye offers an inclusive environment where everyone can learn, grow, 
-              and make meaningful contributions.
-            </p>
+            <h3 className="text-2xl font-bold mb-4 text-white">The Hacksyke Promise</h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="mt-1 w-8 h-8 flex items-center justify-center bg-purple-900/50 rounded-lg">
+                  <span className="text-purple-400 font-bold">1</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-300">Cheap</h4>
+                  <p className="text-gray-400">₹900 or less—always.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="mt-1 w-8 h-8 flex items-center justify-center bg-purple-900/50 rounded-lg">
+                  <span className="text-purple-400 font-bold">2</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-300">Cool</h4>
+                  <p className="text-gray-400">Wild themes, epic streams, coder cred.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="mt-1 w-8 h-8 flex items-center justify-center bg-purple-900/50 rounded-lg">
+                  <span className="text-purple-400 font-bold">3</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-300">Yours</h4>
+                  <p className="text-gray-400">By India's youth, for India's youth.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

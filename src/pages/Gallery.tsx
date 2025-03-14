@@ -51,21 +51,21 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-black via-purple-900 to-blue-900 text-white">
       <Navbar />
       
       <section className="pt-32 pb-20 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-hackskye-blue/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-hackskye-blue/5 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
         </div>
         
         <div ref={containerRef} className="container px-4 mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div 
               data-animate
-              className="inline-block mb-3 py-1 px-3 bg-hackskye-blue/10 text-hackskye-blue rounded-full text-xs font-medium opacity-0"
+              className="inline-block mb-3 py-1 px-3 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium opacity-0"
             >
               Event Highlights
             </div>
@@ -79,7 +79,7 @@ const Gallery = () => {
             
             <p 
               data-animate
-              className="text-gray-600 opacity-0 animation-delay-400"
+              className="text-gray-300 opacity-0 animation-delay-400"
             >
               Relive the exciting moments from our previous hackathons. Browse through 
               our gallery to see innovation, collaboration, and creativity in action.
@@ -96,7 +96,7 @@ const Gallery = () => {
                 {galleryImages.map((image) => (
                   <CarouselItem key={image.id}>
                     <div className="p-1">
-                      <div className="overflow-hidden rounded-xl">
+                      <div className="overflow-hidden rounded-xl shadow-xl border border-purple-500/20">
                         <img 
                           src={image.src} 
                           alt={image.alt} 
@@ -108,8 +108,8 @@ const Gallery = () => {
                 ))}
               </CarouselContent>
               <div className="flex justify-center mt-4">
-                <CarouselPrevious className="relative -left-0 mr-4" />
-                <CarouselNext className="relative -right-0" />
+                <CarouselPrevious className="relative -left-0 mr-4 bg-black/30 border-purple-500/20 text-white" />
+                <CarouselNext className="relative -right-0 bg-black/30 border-purple-500/20 text-white" />
               </div>
             </Carousel>
           </div>
@@ -122,7 +122,7 @@ const Gallery = () => {
             {galleryImages.map((image) => (
               <div 
                 key={image.id}
-                className="overflow-hidden rounded-xl shadow-subtle hover:shadow-md transition-all duration-300"
+                className="overflow-hidden rounded-xl shadow-xl hover:shadow-purple-500/10 transition-all duration-300 border border-purple-500/20"
               >
                 <img 
                   src={image.src} 

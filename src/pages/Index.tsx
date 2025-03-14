@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Timeline from "@/components/Timeline";
 import Sponsors from "@/components/Sponsors";
 import Registration from "@/components/Registration";
+import HacksykeHub from "@/components/HacksykeHub";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -40,13 +41,14 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-hackskye-light-gray">
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
       <Hero />
       <About />
       <Timeline />
       <Sponsors />
       <Registration />
+      <HacksykeHub />
       <FAQ />
       <Footer />
     </div>
