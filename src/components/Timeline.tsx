@@ -70,14 +70,14 @@ const Timeline = () => {
     <section id="timeline" className="py-20 relative overflow-hidden bg-gradient-to-b from-black via-purple-900 to-blue-900">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
       </div>
       
       <div ref={containerRef} className="container px-4 mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div 
             data-animate
-            className="inline-block mb-3 py-1 px-3 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium opacity-0"
+            className="inline-block mb-3 py-1 px-3 bg-purple-500/30 text-purple-200 rounded-full text-xs font-medium opacity-0"
           >
             Event Schedule
           </div>
@@ -91,7 +91,7 @@ const Timeline = () => {
           
           <p 
             data-animate
-            className="text-gray-300 opacity-0 animation-delay-400"
+            className="text-gray-200 opacity-0 animation-delay-400"
           >
             From kickoff to the closing ceremony, every moment at Hacksyke is 
             designed to maximize your experience. Here's what to expect during our 
@@ -105,22 +105,22 @@ const Timeline = () => {
               key={dayIndex}
               data-animate
               className={cn(
-                "lg:w-1/3 bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 shadow-xl opacity-0",
+                "lg:w-1/3 bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30 shadow-xl opacity-0",
                 `animation-delay-${(dayIndex + 1) * 200}`
               )}
             >
-              <div className="bg-purple-900/50 rounded-lg p-4 mb-6">
-                <h3 className="text-xl font-bold text-purple-300">{day.day}</h3>
-                <p className="text-sm text-gray-400">{day.date}</p>
+              <div className="bg-purple-900/60 rounded-lg p-4 mb-6">
+                <h3 className="text-xl font-bold text-purple-200">{day.day}</h3>
+                <p className="text-sm text-gray-300">{day.date}</p>
               </div>
               
               <div className="space-y-6">
                 {day.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="relative pl-6 border-l border-purple-500/30">
-                    <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-purple-500"></div>
-                    <p className="text-xs text-purple-300 font-medium">{item.time}</p>
+                  <div key={itemIndex} className="relative pl-6 border-l border-purple-500/40">
+                    <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-purple-400"></div>
+                    <p className="text-xs text-purple-200 font-medium">{item.time}</p>
                     <h4 className="text-sm font-semibold mb-1 text-white">{item.title}</h4>
-                    <p className="text-xs text-gray-400">{item.description}</p>
+                    <p className="text-xs text-gray-300">{item.description}</p>
                   </div>
                 ))}
               </div>

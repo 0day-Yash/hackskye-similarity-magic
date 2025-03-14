@@ -89,11 +89,11 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-hackskye-blue/30 rounded-full;
+    @apply bg-hackskye-blue/40 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-hackskye-blue/50;
+    @apply bg-hackskye-blue/60;
   }
 
   /* Typography improvements */
@@ -112,7 +112,7 @@
   }
 
   .glass-dark {
-    @apply bg-hackskye-dark-gray/40 backdrop-blur-lg border border-white/10 shadow-glass;
+    @apply bg-hackskye-dark-gray/50 backdrop-blur-lg border border-white/10 shadow-glass;
   }
 
   .text-gradient {
